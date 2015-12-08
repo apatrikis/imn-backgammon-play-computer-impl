@@ -1,0 +1,16 @@
+<!--
+	the config file location may be specified on the command line like this:
+	-Dlogback.configurationFile=/path/to/config.xml
+	(see: http://logback.qos.ch/manual/configuration.html)
+-->
+<configuration debug="false" scan="false" scanPeriod="15 minutes">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="OFF">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
